@@ -1,0 +1,14 @@
+16:37:39.732 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\system.xml. 
+18:04:49.034 INFO  - Saving repository preferences. 
+18:04:49.054 INFO  - Reading in cores from local repositories: 
+		 \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\repository
+		 \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\repository\ProcessorIPLib 
+18:04:49.114 INFO  - Updating libgen.options on all BSP projects. 
+18:04:49.114 INFO  - Cleaning BSP projects in the workspace. 
+18:04:50.518 INFO  - Saving repository preferences. 
+18:05:17.441 INFO  - 'device-tree' is a board support package for an OS for which applications cannot be developed within SDK. 
+18:05:17.441 INFO  - You can configure and build project 'system_bsp' within SDK at will, but have to export it into the appropriate third party environment to develop applications. 
+18:05:18.081 WARN  - Unable to determine location of documentation for OS device-tree. 
+18:08:10.170 INFO  - Settings changed on project system_bsp. Triggering a rebuild... 
+18:52:31.594 INFO  - Invoking Bootgen:  
+18:52:33.670 INFO  - Bootgen command execution is done. 
