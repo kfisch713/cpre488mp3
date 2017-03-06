@@ -70,7 +70,7 @@ struct usb {
 };
 #define to_dev(d) container_of(d, struct usb, kref)
 
-static struct usb_driver driver;
+static struct usb_driver driver_1;
 static void draw_down(struct usb *dev);
 
 static void delete(struct kref *kref)
@@ -92,7 +92,7 @@ static int open(struct inode *inode, struct file *file)
 
 	subminor = iminor(inode);
 
-	interface = usb_find_interface(&driver, subminor);
+	interface = usb_find_interface(&driver_1, subminor);
 	if (!interface) {
 		pr_err("%s - error, can't find device for minor %d\n",
 			__func__, subminor);
@@ -351,31 +351,31 @@ exit:
 	return rv;
 }
 
-static void write_bulk_callback(struct urb *urb)
-{
-	struct usb *dev;
-
-	dev = urb->context;
-
-	/* sync/async unlink faults aren't errors */
-	if (urb->status) {
-		if (!(urb->status == -ENOENT ||
-		    urb->status == -ECONNRESET ||
-		    urb->status == -ESHUTDOWN))
-			dev_err(&dev->interface->dev,
-				"%s - nonzero write bulk status received: %d\n",
-				__func__, urb->status);
-
-		spin_lock(&dev->err_lock);
-		dev->errors = urb->status;
-		spin_unlock(&dev->err_lock);
-	}
-
-	/* free up our allocated buffer */
-	usb_free_coherent(urb->dev, urb->transfer_buffer_length,
-			  urb->transfer_buffer, urb->transfer_dma);
-	up(&dev->limit_sem);
-}
+//static void write_bulk_callback(struct urb *urb)
+//{
+//	struct usb *dev;
+//
+//	dev = urb->context;
+//
+//	/* sync/async unlink faults aren't errors */
+//	if (urb->status) {
+//		if (!(urb->status == -ENOENT ||
+//		    urb->status == -ECONNRESET ||
+//		    urb->status == -ESHUTDOWN))
+//			dev_err(&dev->interface->dev,
+//				"%s - nonzero write bulk status received: %d\n",
+//				__func__, urb->status);
+//
+//		spin_lock(&dev->err_lock);
+//		dev->errors = urb->status;
+//		spin_unlock(&dev->err_lock);
+//	}
+//
+//	/* free up our allocated buffer */
+//	usb_free_coherent(urb->dev, urb->transfer_buffer_length,
+//			  urb->transfer_buffer, urb->transfer_dma);
+//	up(&dev->limit_sem);
+//}
 
 static ssize_t write(struct file *file, const char *user_buffer,
 			  size_t count, loff_t *ppos)
@@ -438,6 +438,15 @@ static ssize_t write(struct file *file, const char *user_buffer,
 		retval = -EFAULT;
 		goto error;
 	}
+	char launch_code[8];
+	launch_code[0] = LAUNCHER_CTRL_COMMAND_PREFIX;
+	launch_code[1] = (char) *buf;
+	launch_code[2] = 0;
+	launch_code[3] = 0;
+	launch_code[4] = 0;
+	launch_code[5] = 0;
+	launch_code[6] = 0;
+	launch_code[7] = 0;
 
 	/* this lock makes sure we don't submit URBs to gone devices */
 	mutex_lock(&dev->io_mutex);
@@ -448,16 +457,27 @@ static ssize_t write(struct file *file, const char *user_buffer,
 	}
 
 	/* initialize the urb properly */
-	usb_fill_bulk_urb(urb, dev->udev,
+	/*usb_fill_bulk_urb(urb, dev->udev,
 			  usb_sndbulkpipe(dev->udev, dev->bulk_out_endpointAddr),
 			  buf, writesize, write_bulk_callback, dev);
 	urb->transfer_flags |= URB_NO_TRANSFER_DMA_MAP;
 	usb_anchor_urb(urb, &dev->submitted);
+	*/
+	retval = usb_control_msg(dev->udev,
+							usb_sndctrlpipe(dev->udev, 0),
+							LAUNCHER_CTRL_REQUEST,
+							LAUNCHER_CTRL_REQUEST_TYPE,
+							LAUNCHER_CTRL_VALUE,
+							LAUNCHER_CTRL_INDEX,
+							launch_code,
+							sizeof(launch_code),
+							500);
 
 	/* send the data out the bulk port */
-	retval = usb_submit_urb(urb, GFP_KERNEL);
+	/*retval = usb_submit_urb(urb, GFP_KERNEL);*/
+	
 	mutex_unlock(&dev->io_mutex);
-	if (retval) {
+	if (!retval) {
 		dev_err(&dev->interface->dev,
 			"%s - failed submitting write urb, error %d\n",
 			__func__, retval);
@@ -501,7 +521,7 @@ static const struct file_operations fops = {
  * and to have the device registered with the driver core
  */
 static struct usb_class_driver class = {
-	.name =		"%d",
+	.name =		"lawn_chair%d",
 	.fops =		&fops,
 	.minor_base =	USB_MINOR_BASE,
 };
@@ -534,41 +554,41 @@ static int probe(struct usb_interface *interface,
 
 	/* set up the endpoint information */
 	/* use only the first bulk-in and bulk-out endpoints */
-	iface_desc = interface->cur_altsetting;
-	for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
-		endpoint = &iface_desc->endpoint[i].desc;
-
-		if (!dev->bulk_in_endpointAddr &&
-		    usb_endpoint_is_bulk_in(endpoint)) {
-			/* we found a bulk in endpoint */
-			buffer_size = usb_endpoint_maxp(endpoint);
-			dev->bulk_in_size = buffer_size;
-			dev->bulk_in_endpointAddr = endpoint->bEndpointAddress;
-			dev->bulk_in_buffer = kmalloc(buffer_size, GFP_KERNEL);
-			if (!dev->bulk_in_buffer) {
-				dev_err(&interface->dev,
-					"Could not allocate bulk_in_buffer\n");
-				goto error;
-			}
-			dev->bulk_in_urb = usb_alloc_urb(0, GFP_KERNEL);
-			if (!dev->bulk_in_urb) {
-				dev_err(&interface->dev,
-					"Could not allocate bulk_in_urb\n");
-				goto error;
-			}
-		}
-
-		if (!dev->bulk_out_endpointAddr &&
-		    usb_endpoint_is_bulk_out(endpoint)) {
-			/* we found a bulk out endpoint */
-			dev->bulk_out_endpointAddr = endpoint->bEndpointAddress;
-		}
-	}
-	if (!(dev->bulk_in_endpointAddr && dev->bulk_out_endpointAddr)) {
-		dev_err(&interface->dev,
-			"Could not find both bulk-in and bulk-out endpoints\n");
-		goto error;
-	}
+	//iface_desc = interface->cur_altsetting;
+	//for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
+	//	endpoint = &iface_desc->endpoint[i].desc;
+    //
+	//	if (!dev->bulk_in_endpointAddr &&
+	//	    usb_endpoint_is_bulk_in(endpoint)) {
+	//		/* we found a bulk in endpoint */
+	//		buffer_size = usb_endpoint_maxp(endpoint);
+	//		dev->bulk_in_size = buffer_size;
+	//		dev->bulk_in_endpointAddr = endpoint->bEndpointAddress;
+	//		dev->bulk_in_buffer = kmalloc(buffer_size, GFP_KERNEL);
+	//		if (!dev->bulk_in_buffer) {
+	//			dev_err(&interface->dev,
+	//				"Could not allocate bulk_in_buffer\n");
+	//			goto error;
+	//		}
+	//		dev->bulk_in_urb = usb_alloc_urb(0, GFP_KERNEL);
+	//		if (!dev->bulk_in_urb) {
+	//			dev_err(&interface->dev,
+	//				"Could not allocate bulk_in_urb\n");
+	//			goto error;
+	//		}
+	//	}
+    //
+	//	if (!dev->bulk_out_endpointAddr &&
+	//	    usb_endpoint_is_bulk_out(endpoint)) {
+	//		/* we found a bulk out endpoint */
+	//		dev->bulk_out_endpointAddr = endpoint->bEndpointAddress;
+	//	}
+	//}
+	//if (!(dev->bulk_in_endpointAddr && dev->bulk_out_endpointAddr)) {
+	//	dev_err(&interface->dev,
+	//		"Could not find both bulk-in and bulk-out endpoints\n");
+	//	goto error;
+	//}
 
 	/* save our data pointer in this interface device */
 	usb_set_intfdata(interface, dev);
@@ -666,8 +686,8 @@ static int post_reset(struct usb_interface *intf)
 	return 0;
 }
 
-static struct usb_driver driver = {
-	.name =		"S_K_E_L_eton_LOL_GOTTEM",
+static struct usb_driver driver_1 = {
+	.name =		"LAWN_CHAIR",
 	.probe =	probe,
 	.disconnect =	disconnect,
 	.suspend =	suspend,
@@ -678,6 +698,6 @@ static struct usb_driver driver = {
 	.supports_autosuspend = 1,
 };
 
-module_usb_driver(driver);
+module_usb_driver(driver_1);
 
 MODULE_LICENSE("GPL");
