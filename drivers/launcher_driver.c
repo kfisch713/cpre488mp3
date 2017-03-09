@@ -385,6 +385,7 @@ static ssize_t write(struct file *file, const char *user_buffer,
 	struct urb *urb = NULL;
 	char *buf = NULL;
 	size_t writesize = min(count, (size_t)MAX_TRANSFER);
+	char launch_code[8];
 
 	dev = file->private_data;
 
@@ -438,7 +439,7 @@ static ssize_t write(struct file *file, const char *user_buffer,
 		retval = -EFAULT;
 		goto error;
 	}
-	char launch_code[8];
+	
 	launch_code[0] = LAUNCHER_CTRL_COMMAND_PREFIX;
 	launch_code[1] = (char) *buf;
 	launch_code[2] = 0;
@@ -477,7 +478,7 @@ static ssize_t write(struct file *file, const char *user_buffer,
 	/*retval = usb_submit_urb(urb, GFP_KERNEL);*/
 	
 	mutex_unlock(&dev->io_mutex);
-	if (!retval) {
+	if (retval!=sizeof(launch_code)) {
 		dev_err(&dev->interface->dev,
 			"%s - failed submitting write urb, error %d\n",
 			__func__, retval);
@@ -530,10 +531,10 @@ static int probe(struct usb_interface *interface,
 		      const struct usb_device_id *id)
 {
 	struct usb *dev;
-	struct usb_host_interface *iface_desc;
-	struct usb_endpoint_descriptor *endpoint;
-	size_t buffer_size;
-	int i;
+	//struct usb_host_interface *iface_desc;
+	//struct usb_endpoint_descriptor *endpoint;
+	//size_t buffer_size;
+	//int i;
 	int retval = -ENOMEM;
 
 	/* allocate memory for our device state and initialize it */

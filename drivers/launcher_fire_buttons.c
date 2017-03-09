@@ -35,9 +35,9 @@ int main() {
   int fd;
   int cmd = LAUNCHER_STOP;
   char *dev = LAUNCHER_NODE;
-  unsigned int duration = 500;
-  char* BTNs = NULL;
-  char* SWs = NULL;
+  unsigned int duration = 1000;
+  int* BTNs = NULL;
+  int* SWs = NULL;
 
   
   fd = open(dev, O_RDWR);
@@ -50,25 +50,31 @@ int main() {
   BTNs = mmap(NULL, 1, PROT_READ, MAP_SHARED, dev_mem_ptr, BTN_ADDRESS);
   SWs = mmap(NULL, 1, PROT_READ, MAP_SHARED, dev_mem_ptr, SW_ADDRESS);
   
-  launcher_cmd(fd, LAUNCHER_FIRE);
+  //launcher_cmd(fd, LAUNCHER_FIRE);
   
+  /*
   while (1){
 	  printf("buttons: %x\t", *BTNs);
 	  printf("switches: %x\n", *SWs);
 	  
 	  sleep(1);
   }
-  
+  */
   
   
   //Switch 1 exits the loop
   while( !(*SWs & 1) ){
-    printf("BTNs: %x\n", *BTNs);
-    
-    switch(*BTNs & 0b00011111){
+    printf("BTNs int: %d\tBTNs char: %c\tBTNs hex: %x\t BTNs cast_int: %d\n", *BTNs, *BTNs, *BTNs, (int)*BTNs);
+    fflush(stdout);
+	
+	while(!(*BTNs)){
+		printf("waiting\n");
+	}
+	
+    switch((int)(*BTNs)){
 	  //Button up
   	  case 1:
-	    cmd = LAUNCHER_UP;
+	    cmd = LAUNCHER_FIRE;
 		break;
 	  
 	  //Button down
@@ -86,20 +92,19 @@ int main() {
 	    cmd = LAUNCHER_RIGHT;
 		break;
 	  
-	  //Button center
+	  //Button Up
 	  case 16: 
-		cmd = LAUNCHER_FIRE;
+		cmd = LAUNCHER_UP;
 		break;
 	
 	  //Default
 	  default:
 		cmd = LAUNCHER_STOP;
-		break;
     }
-    usleep(200);
+	usleep(duration * 1000);
     launcher_cmd(fd, cmd);
-    //usleep(duration * 1000);
-    //launcher_cmd(fd, LAUNCHER_STOP);
+    usleep(duration * 1000);
+    launcher_cmd(fd, LAUNCHER_STOP);
   }
   
   munmap(BTNs, 1);
@@ -108,3 +113,4 @@ int main() {
   close(fd);
   return EXIT_SUCCESS;
 }
+
