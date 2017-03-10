@@ -1,7 +1,21 @@
-U:\Desktop\cpre488mp3\system\implementation\system.ngc 1488494085
-U:/Desktop/cpre488mp3/system/implementation/system_processing_system7_0_wrapper.ngc 1488494067
-U:/Desktop/cpre488mp3/system/implementation/system_axi4lite_0_wrapper.ngc 1488494072
-U:/Desktop/cpre488mp3/system/implementation/system_sws_8bits_wrapper.ngc 1488494033
-U:/Desktop/cpre488mp3/system/implementation/system_leds_8bits_wrapper.ngc 1488494044
-U:/Desktop/cpre488mp3/system/implementation/system_btns_5bits_wrapper.ngc 1488494055
+U:\Desktop\cpre488mp3\system\implementation\system.ngc 1489101168
+U:/Desktop/cpre488mp3/system/implementation/system_fmc_imageon_vita_receiver_0_wrapper.ngc 1489101081
+U:/Desktop/cpre488mp3/system/implementation/system_processing_system7_0_wrapper.ngc 1489099973
+U:/Desktop/cpre488mp3/system/implementation/system_clock_generator_1_wrapper.ngc 1489101085
+U:/Desktop/cpre488mp3/system/implementation/system_v_vid_in_axi4s_0_wrapper.ngc 1489099770
+U:/Desktop/cpre488mp3/system/implementation/system_axi4lite_0_wrapper.ngc 1489101103
+U:/Desktop/cpre488mp3/system/implementation/system_axi_interconnect_1_wrapper.ngc 1489101098
+U:/Desktop/cpre488mp3/system/implementation/system_fmc_imageon_hdmi_out_0_wrapper.ngc 1489100058
+U:/Desktop/cpre488mp3/system/implementation/system_v_tc_1_wrapper.ngc 1489099806
+U:/Desktop/cpre488mp3/system/implementation/system_v_tc_0_wrapper.ngc 1489099846
+U:/Desktop/cpre488mp3/system/implementation/system_v_rgb2ycrcb_0_wrapper.ngc 1489101069
+U:/Desktop/cpre488mp3/system/implementation/system_v_cresample_0_wrapper.ngc 1489101074
+U:/Desktop/cpre488mp3/system/implementation/system_v_cfa_0_wrapper.ngc 1489099952
+U:/Desktop/cpre488mp3/system/implementation/system_v_axi4s_vid_out_0_wrapper.ngc 1489099962
+U:/Desktop/cpre488mp3/system/implementation/system_axi_vdma_0_wrapper.ngc 1489101092
+U:/Desktop/cpre488mp3/system/implementation/system_axi_tpg_0_wrapper.ngc 1489100634
+U:/Desktop/cpre488mp3/system/implementation/system_fmc_imageon_iic_0_wrapper.ngc 1489100049
+U:/Desktop/cpre488mp3/system/implementation/system_sws_8bits_wrapper.ngc 1489099756
+U:/Desktop/cpre488mp3/system/implementation/system_iic_fmc_wrapper.ngc 1489101062
+U:/Desktop/cpre488mp3/system/implementation/system_btns_5bits_wrapper.ngc 1489099756
 OK

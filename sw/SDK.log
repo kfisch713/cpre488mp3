@@ -12,3 +12,36 @@
 18:08:10.170 INFO  - Settings changed on project system_bsp. Triggering a rebuild... 
 18:52:31.594 INFO  - Invoking Bootgen:  
 18:52:33.670 INFO  - Bootgen command execution is done. 
+17:27:38.437 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\system.xml. 
+17:27:41.079 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\system.xml. 
+17:27:41.769 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+17:27:42.479 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+17:27:44.995 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+17:27:45.067 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+17:27:45.282 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+17:27:45.386 INFO  - Copied contents of \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+17:27:45.580 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+17:27:47.319 INFO  - Restoring local repository preferences: 
+		 \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\repository
+		 \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\repository\ProcessorIPLib 
+17:27:50.130 INFO  - Updating hardware inferred compiler options for zynq_fsbl. 
+17:27:50.980 INFO  - Clearing existing target manager status. 
+17:27:52.464 INFO  - Copied contents of \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\sw\system_hw_platform\ps7_init.c into \zynq_fsbl\src\ps7_init.c. 
+17:27:52.539 INFO  - Copied contents of \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\sw\system_hw_platform\ps7_init.h into \zynq_fsbl\src\ps7_init.h. 
+17:27:52.685 INFO  - Copied contents of \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\sw\system_hw_platform\ps7_init.html into \zynq_fsbl\src\ps7_init.html. 
+17:27:53.305 INFO  - Copied contents of \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\sw\system_hw_platform\ps7_init.tcl into \zynq_fsbl\src\ps7_init.tcl. 
+17:30:01.310 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:30:05.602 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\kfisch13\Desktop\cpre488mp3\system\SDK\SDK_Export\hw\system.xml. 
+17:33:43.857 INFO  - Restoring local repository preferences: 
+		 \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\repository
+		 \\my.files.iastate.edu\Users\kfisch13\Desktop\cpre488mp3\repository\ProcessorIPLib 
+17:33:44.077 ERROR - Unable to read in MSS file U:\Desktop\cpre488mp3\sw\zynq_fsbl_bsp\system.mss. 
+17:33:44.107 ERROR - Unable to read in MSS file U:\Desktop\cpre488mp3\sw\zynq_fsbl_bsp\system.mss. 
+17:33:44.187 WARN  - Unable to determine location of documentation for OS . 
+17:33:44.207 ERROR - Unable to read in MSS file U:\Desktop\cpre488mp3\sw\zynq_fsbl_bsp\system.mss. 
+17:33:44.257 ERROR - Unable to read in MSS file U:\Desktop\cpre488mp3\sw\zynq_fsbl_bsp\system.mss. 
+17:53:14.156 ERROR - Unable to read in MSS file U:\Desktop\cpre488mp3\sw\zynq_fsbl_bsp\system.mss. 
+18:06:40.755 INFO  - Invoking Bootgen:  
+18:06:42.833 INFO  - Bootgen command execution is done. 
+18:14:29.830 INFO  - Invoking Bootgen:  
+18:14:31.367 INFO  - Bootgen command execution is done. 

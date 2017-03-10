@@ -25,7 +25,7 @@ INTSTYLE = default
 
 XPS_HDL_LANG = vhdl
 GLOBAL_SEARCHPATHOPT = 
-PROJECT_SEARCHPATHOPT = 
+PROJECT_SEARCHPATHOPT =  -lp U:/Desktop/cpre488mp3/repository/
 
 SEARCHPATHOPT = $(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)
 
@@ -33,7 +33,7 @@ SUBMODULE_OPT =
 
 PLATGEN_OPTIONS = -p $(DEVICE) -lang $(XPS_HDL_LANG) -intstyle $(INTSTYLE) $(SEARCHPATHOPT) $(SUBMODULE_OPT) -msg __xps/ise/xmsgprops.lst
 
-OBSERVE_PAR_OPTIONS = -error yes
+OBSERVE_PAR_OPTIONS = -error no
 
 MICROBLAZE_BOOTLOOP = $(XILINX_EDK_DIR)/sw/lib/microblaze/mb_bootloop.elf
 MICROBLAZE_BOOTLOOP_LE = $(XILINX_EDK_DIR)/sw/lib/microblaze/mb_bootloop_le.elf
@@ -60,13 +60,123 @@ DEFAULT_SIM_SCRIPT = $(BEHAVIORAL_SIM_SCRIPT)
 SIMGEN_OPTIONS = -p $(DEVICE) -lang $(XPS_HDL_LANG) -intstyle $(INTSTYLE) $(SEARCHPATHOPT) $(BRAMINIT_ELF_SIM_FILE_ARGS) -msg __xps/ise/xmsgprops.lst -s isim -X U:/Desktop/cpre488mp3/system/
 
 
-CORE_STATE_DEVELOPMENT_FILES = 
+CORE_STATE_DEVELOPMENT_FILES = //my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/netlist/afifo_32_v6.ngc \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/netlist/afifo_64i_16o_v6.ngc \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/netlist/pulse_regen_v6.ngc \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd \
+C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/phsaligner.v \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/verilog/serdes_1_to_5_diff_data.v \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_lowlevel.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_seq.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/spi_top.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_32.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_mux.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_sync.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_clocks.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_compare.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_control.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_core.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_datadeser_s6.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_idelayctrl.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/iserdes_interface_s6.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pck_crc8_d8.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pck_crc10_d10.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_calc.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_comp.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/crc_check.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/syncchanneldecoder.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/remapper.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/triggergenerator.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/videosyncgen.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/afifo_64i_16o.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/pulse_regen.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/correct_column_fpn_prnu_dsp48e.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_core.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/user_logic.vhd \
+//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/repository/ProcessorIPLib/pcores/fmc_imageon_vita_receiver_v1_13_a/hdl/vhdl/fmc_imageon_vita_receiver.vhd
 
-WRAPPER_NGC_FILES = implementation/system_axi4lite_0_wrapper.ngc \
+WRAPPER_NGC_FILES = implementation/system_v_vid_in_axi4s_0_wrapper.ngc \
+implementation/system_v_tc_1_wrapper.ngc \
+implementation/system_v_tc_0_wrapper.ngc \
+implementation/system_v_rgb2ycrcb_0_wrapper.ngc \
+implementation/system_v_cresample_0_wrapper.ngc \
+implementation/system_v_cfa_0_wrapper.ngc \
+implementation/system_v_axi4s_vid_out_0_wrapper.ngc \
+implementation/system_processing_system7_0_wrapper.ngc \
+implementation/system_fmc_imageon_vita_receiver_0_wrapper.ngc \
+implementation/system_fmc_imageon_iic_0_wrapper.ngc \
+implementation/system_fmc_imageon_hdmi_out_0_wrapper.ngc \
+implementation/system_clock_generator_1_wrapper.ngc \
+implementation/system_axi_vdma_0_wrapper.ngc \
+implementation/system_axi_tpg_0_wrapper.ngc \
+implementation/system_axi_interconnect_1_wrapper.ngc \
+implementation/system_axi4lite_0_wrapper.ngc \
 implementation/system_sws_8bits_wrapper.ngc \
-implementation/system_leds_8bits_wrapper.ngc \
-implementation/system_btns_5bits_wrapper.ngc \
-implementation/system_processing_system7_0_wrapper.ngc
+implementation/system_iic_fmc_wrapper.ngc \
+implementation/system_btns_5bits_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

@@ -64,6 +64,8 @@
 #include "xstatus.h"
 #include "fsbl_hooks.h"
 
+#include "camera_app.h"
+
 /************************** Variable Definitions *****************************/
 
 
@@ -146,6 +148,8 @@ u32 FsblHookBeforeHandoff(void)
 	 * User logic to be added here.
 	 * Errors to be stored in the status variable and returned
 	 */
+	camera_main();
+
 	fsbl_printf(DEBUG_INFO,"In FsblHookBeforeHandoff function \r\n");
 
 	return (Status);
