@@ -5,7 +5,7 @@
 		<item value="189" key="DIALOG_Y_ORIGIN"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
 		<item value="862" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
@@ -13,11 +13,18 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="XPAR_PS7_QSPI_FSBL_HACK" key="selection"/>
+		<item value="This Boot" key="selection"/>
 		<list key="findhistory">
+			<item value="This Boot"/>
+			<item value="fmc"/>
+			<item value="FsblHookBefore"/>
+			<item value="This"/>
+			<item value="PAR_DDRM"/>
+			<item value="config-&gt;"/>
 			<item value="XPAR_PS7_QSPI_LINEAR_0_S_AXI_BASEADDR"/>
 		</list>
 		<list key="replacehistory">
+			<item value="camera_config."/>
 			<item value="XPAR_PS7_QSPI_FSBL_HACK"/>
 		</list>
 	</section>

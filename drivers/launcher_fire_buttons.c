@@ -6,8 +6,8 @@
 #include "launcher_commands.h"
 
 // from device tree
-#define BTN_ADDRESS 0x41240000
-#define SW_ADDRESS  0x41200000
+#define BTN_ADDRESS 0x41200000
+#define SW_ADDRESS  0x41240000
 
 static void launcher_cmd(int fd, int cmd) {
   int retval = 0;

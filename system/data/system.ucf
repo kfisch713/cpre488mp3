@@ -138,8 +138,8 @@ NET "fmc_imageon_video_clk*"    IOSTANDARD="LVCMOS25";
 NET vid_out_clk TNM_NET = vout_clk;
 TIMESPEC TS_vout_clk = PERIOD vout_clk 148500 kHz;
 
-#NET "fmc_imageon_vita_receiver_0_io_vita_clk_out_p_pin" TNM_NET = vita_clkout_p;
-#TIMESPEC TS_CLK_TO_FPGA_P = PERIOD "vita_clkout_p" 375000 kHz HIGH 50%;
+NET "fmc_imageon_vita_receiver_0_io_vita_clk_out_p_pin" TNM_NET = vita_clkout_p;
+TIMESPEC TS_CLK_TO_FPGA_P = PERIOD "vita_clkout_p" 375000 kHz HIGH 50%;
 
 NET fmc_imageon_video_clk1 TNM_NET = vclk_clk;
 TIMESPEC TS_vclk_clk = PERIOD vclk_clk 148500 kHz;
@@ -147,14 +147,14 @@ TIMESPEC TS_vclk_clk = PERIOD vclk_clk 148500 kHz;
 NET *axi4lite_0_clk TNM_NET = CLK_50MHz;
 TIMESPEC TS_CLK_IN = PERIOD CLK_50MHz  20 ns;
 
-#NET *clk_200mhz TNM_NET = CLK_200MHz;
-#TIMESPEC TS_CLK_IN = PERIOD CLK_200MHz 5 ns;
+NET *clk_200mhz TNM_NET = CLK_200MHz;
+TIMESPEC TS_CLK_IN = PERIOD CLK_200MHz 5 ns;
 
 
 #
-# False paths (not sure if needed)
+# False paths (not needed)
 #
-#NET axi4lite_0_clk TNM_NET = axil_clk;   # 50 MHz AXI4-Lite clock
-#NET vita_clk_ref   TNM_NET = vita_clk;
-#TIMESPEC TS_AXIL2VITA = FROM axil_clk TO vita_clk TIG;
-#TIMESPEC TS_VITA2AXIL = FROM vita_clk TO axil_clk TIG;
+NET axi4lite_0_clk TNM_NET = axil_clk;   # 50 MHz AXI4-Lite clock
+NET vita_clk_ref   TNM_NET = vita_clk;
+TIMESPEC TS_AXIL2VITA = FROM axil_clk TO vita_clk TIG;
+TIMESPEC TS_VITA2AXIL = FROM vita_clk TO axil_clk TIG;

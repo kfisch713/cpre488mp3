@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="2298" y="-8">
+<window height="768" maximized="true" width="1024" x="645" y="-8">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -22,6 +22,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -35,35 +37,21 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="qspi.c" partName="qspi.c" path="U:/Desktop/cpre488mp3/sw/zynq_fsbl/src/qspi.c" title="qspi.c" tooltip="zynq_fsbl/src/qspi.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/zynq_fsbl/src/qspi.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3581" selectionTopPixel="493"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.h" partName="camera_app.h" path="U:/Documents/cpre488mp3/sw/zynq_fsbl/src/camera_app.h" title="camera_app.h" tooltip="zynq_fsbl/src/camera_app.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/zynq_fsbl/src/camera_app.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="663" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="U:/Desktop/cpre488mp3/sw/zynq_fsbl/src/main.c" title="main.c" tooltip="zynq_fsbl/src/main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.ui.DefaultTextEditor" name="ps7_init.tcl" partName="ps7_init.tcl" path="U:/Documents/cpre488mp3/sw/system_hw_platform/ps7_init.tcl" title="ps7_init.tcl" tooltip="system_hw_platform/ps7_init.tcl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_hw_platform/ps7_init.tcl"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6186" selectionTopPixel="1890"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="U:/Documents/cpre488mp3/sw/zynq_fsbl/src/main.c" title="main.c" tooltip="zynq_fsbl/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/zynq_fsbl/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="34650" selectionTopPixel="22933"/>
-</editor>
-<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="U:/Desktop/cpre488mp3/sw/system_hw_platform/system.xml" title="system.xml" tooltip="system_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_hw_platform/system.xml"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_utils.c" partName="fmc_imageon_utils.c" path="U:/Desktop/cpre488mp3/sw/zynq_fsbl/src/fmc_imageon_utils.c" title="fmc_imageon_utils.c" tooltip="zynq_fsbl/src/fmc_imageon_utils.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/zynq_fsbl/src/fmc_imageon_utils.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="43" selectionOffset="9493" selectionTopPixel="3978"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" partName="camera_app.c" path="U:/Desktop/cpre488mp3/sw/zynq_fsbl/src/camera_app.c" title="camera_app.c" tooltip="zynq_fsbl/src/camera_app.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/zynq_fsbl/src/camera_app.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1186" selectionTopPixel="414"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_vita_receiver.c" partName="fmc_imageon_vita_receiver.c" path="U:/Desktop/cpre488mp3/sw/system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c" title="fmc_imageon_vita_receiver.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="34618" selectionTopPixel="15266"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="16408" selectionTopPixel="8925"/>
 </editor>
 </editors>
 <views>
@@ -75,10 +63,6 @@
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (5 items)"/>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -146,9 +130,9 @@
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.tm.terminal.view.TerminalView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars/>
@@ -174,13 +158,14 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.13253012" ratioLeft="253" ratioRight="1656" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.60902256" ratioLeft="567" ratioRight="364" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.5821697" ratioLeft="542" ratioRight="389" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -207,164 +192,169 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/fsbl_debug.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/fsbl_hooks.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/camera_app.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/camera_app.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/qspi.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/system_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/fmc_imageon_utils.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters_ps.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters_ps.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/camera_app.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/standalone_v3_06_a/src/xparameters_ps.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/fmc_imageon_utils.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" path="/system_bsp/ps7_cortexa9_0/lib/libxil.a"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/system_bsp/system.mss"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/fsbl_hooks.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/fmc_imageon_utils.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/camera_app.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/fmc_iic.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/system_bsp/system.mss"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/system_hw_platform/system.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/system_hw_platform/ps7_init.tcl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/zynq_fsbl/src/main.c"/>
 </editors>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position/>
+<item historyLabel="xparameters.h" index="1">
+<position info="not_deleted" x="556" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position/>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="3073" y="0"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position/>
+<item historyLabel="xparameters.h" index="1">
+<position info="not_deleted" x="556" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="2">
-<position info="not_deleted" x="1144" y="32"/>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="3038" y="21"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position/>
+<item historyLabel="xparameters_ps.h" index="2">
+<position info="not_deleted" x="3459" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="2">
-<position info="not_deleted" x="710" y="25"/>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="3038" y="21"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position/>
+<item historyLabel="xparameters_ps.h" index="2">
+<position info="not_deleted" x="3426" y="21"/>
 </item>
-<item historyLabel="camera_app.c" index="2">
-<position info="not_deleted" x="2064" y="109"/>
+<item historyLabel="xparameters.h" index="1">
+<position info="not_deleted" x="556" y="0"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position/>
+<item historyLabel="xparameters_ps.h" index="2">
+<position info="not_deleted" x="3426" y="21"/>
 </item>
-<item historyLabel="camera_app.c" index="2">
-<position info="not_deleted" x="2137" y="0"/>
+<item historyLabel="camera_app.c" index="0">
+<position info="not_deleted" x="2966" y="25"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position/>
+<item historyLabel="xparameters.h" index="1">
+<position info="not_deleted" x="3539" y="17"/>
+</item>
+<item historyLabel="xparameters_ps.h" index="3">
+<position info="not_deleted" x="3426" y="21"/>
+</item>
+<item historyLabel="xparameters.h" index="1">
+<position info="not_deleted" x="7727" y="8"/>
 </item>
 <item historyLabel="camera_app.c" index="4">
-<position info="not_deleted" x="2248" y="0"/>
+<position info="not_deleted" x="3370" y="0"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="xparameters.h" index="1">
+<position info="not_deleted" x="15774" y="0"/>
 </item>
-<item historyLabel="fsbl_hooks.c" index="1">
-<position info="not_deleted" x="5278" y="0"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="3607" y="21"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="82" y="0"/>
+<item historyLabel="xparameters_ps.h" index="5">
+<position info="not_deleted" x="3451" y="0"/>
 </item>
-<item historyLabel="camera_app.h" index="5">
-<position info="not_deleted" x="625" y="0"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="3607" y="21"/>
 </item>
-<item historyLabel="camera_app.c" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="fmc_imageon_utils.c" index="6">
+<position info="not_deleted" x="808" y="0"/>
 </item>
-<item historyLabel="camera_app.h" index="5">
-<position info="not_deleted" x="625" y="0"/>
+<item historyLabel="fmc_imageon_utils.c" index="6">
+<position info="not_deleted" x="810" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="1145" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="82" y="0"/>
-</item>
-<item historyLabel="qspi.c" index="7">
-<position info="not_deleted" x="3581" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="31923" y="37"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="32063" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="12021" y="11"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="34741" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="34204" y="0"/>
-</item>
-<item historyLabel="fsbl_debug.h" index="0">
-<position info="not_deleted" x="64" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="7">
 <position info="not_deleted" x="34650" y="0"/>
 </item>
-<item historyLabel="system.xml" index="8"/>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="34650" y="0"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="1840" y="0"/>
 </item>
-<item historyLabel="system.xml" index="8"/>
-<item historyLabel="fmc_imageon_utils.c" index="9">
+<item historyLabel="libxil.a" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="834" y="0"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="1171" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="9493" y="43"/>
+<item historyLabel="system.mss" index="9"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="1005" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_vita_receiver.c" index="10">
-<position info="not_deleted" x="28400" y="43"/>
+<item historyLabel="main.c" index="10">
+<position info="not_deleted" x="20034" y="21"/>
 </item>
-<item historyLabel="fmc_imageon_vita_receiver.c" index="10">
-<position info="not_deleted" x="34420" y="34"/>
+<item historyLabel="fsbl_hooks.c" index="11">
+<position info="not_deleted" x="5414" y="11"/>
 </item>
-<item historyLabel="fmc_imageon_vita_receiver.c" index="10">
-<position info="not_deleted" x="18700" y="34"/>
+<item historyLabel="camera_app.c" index="4">
+<position info="not_deleted" x="877" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="9493" y="43"/>
+<item historyLabel="fsbl_hooks.c" index="11">
+<position info="not_deleted" x="5414" y="11"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="9546" y="0"/>
+<item historyLabel="main.c" index="10">
+<position info="not_deleted" x="17285" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="777" y="0"/>
+<item historyLabel="fmc_imageon_utils.c" index="12">
+<position info="not_deleted" x="808" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="6">
-<position info="not_deleted" x="1331" y="21"/>
+<item historyLabel="fsbl_hooks.c" index="11">
+<position info="not_deleted" x="5414" y="11"/>
 </item>
-<item historyLabel="xparameters.h" index="11">
-<position info="not_deleted" x="8698" y="21"/>
+<item historyLabel="main.c" index="10">
+<position info="not_deleted" x="17285" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="6">
-<position info="not_deleted" x="1394" y="31"/>
+<item historyLabel="fmc_imageon_utils.c" index="12">
+<position info="not_deleted" x="1278" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="11">
-<position info="not_deleted" x="8424" y="31"/>
+<item historyLabel="camera_app.h" index="13">
+<position info="not_deleted" x="698" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="6">
-<position info="not_deleted" x="1466" y="41"/>
+<item historyLabel="fmc_imageon_utils.c" index="12">
+<position info="not_deleted" x="511" y="0"/>
 </item>
-<item historyLabel="xparameters.h" index="11">
-<position info="not_deleted" x="9758" y="41"/>
+<item historyLabel="camera_app.h" index="13">
+<position info="not_deleted" x="740" y="0"/>
 </item>
-<item historyLabel="camera_app.c" index="6">
-<position info="not_deleted" x="1186" y="0"/>
+<item historyLabel="fmc_imageon_utils.c" index="12">
+<position info="not_deleted" x="675" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="777" y="0"/>
+<item historyLabel="fmc_iic.h" index="14">
+<position info="not_deleted" x="3899" y="0"/>
 </item>
-<item historyLabel="fmc_imageon_utils.c" index="9">
-<position info="not_deleted" x="9493" y="43"/>
+<item historyLabel="fmc_imageon_utils.c" index="12">
+<position info="not_deleted" x="671" y="0"/>
 </item>
-<item active="true" historyLabel="fmc_imageon_vita_receiver.c" index="10">
-<position info="not_deleted" x="28400" y="43"/>
+<item historyLabel="camera_app.h" index="13">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="system.mss" index="15"/>
+<item historyLabel="camera_app.h" index="13">
+<position info="not_deleted" x="663" y="0"/>
+</item>
+<item historyLabel="system.xml" index="16"/>
+<item historyLabel="camera_app.h" index="13">
+<position info="not_deleted" x="663" y="0"/>
+</item>
+<item historyLabel="ps7_init.tcl" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ps7_init.tcl" index="17">
+<position info="not_deleted" x="6186" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="18">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -383,41 +373,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_vita_receiver.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c">
-<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="zynq_fsbl/src/main.c">
+<persistable path="/zynq_fsbl/src/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h">
-<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.c" tooltip="zynq_fsbl/src/camera_app.c">
-<persistable path="/zynq_fsbl/src/camera_app.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_utils.c" tooltip="zynq_fsbl/src/fmc_imageon_utils.c">
-<persistable path="/zynq_fsbl/src/fmc_imageon_utils.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ps7_init.tcl" tooltip="system_hw_platform/ps7_init.tcl">
+<persistable path="/system_hw_platform/ps7_init.tcl"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="system_hw_platform/system.xml">
 <persistable path="/system_hw_platform/system.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fsbl_debug.h" tooltip="zynq_fsbl/src/fsbl_debug.h">
-<persistable path="/zynq_fsbl/src/fsbl_debug.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
+<persistable path="/system_bsp/system.mss"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="zynq_fsbl/src/main.c">
-<persistable path="/zynq_fsbl/src/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qspi.c" tooltip="zynq_fsbl/src/qspi.c">
-<persistable path="/zynq_fsbl/src/qspi.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_iic.h" tooltip="system_bsp/ps7_cortexa9_0/include/fmc_iic.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/fmc_iic.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="camera_app.h" tooltip="zynq_fsbl/src/camera_app.h">
 <persistable path="/zynq_fsbl/src/camera_app.h"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_utils.c" tooltip="zynq_fsbl/src/fmc_imageon_utils.c">
+<persistable path="/zynq_fsbl/src/fmc_imageon_utils.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fsbl_hooks.c" tooltip="zynq_fsbl/src/fsbl_hooks.c">
 <persistable path="/zynq_fsbl/src/fsbl_hooks.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="zynq_fsbl_bsp/system.mss">
-<persistable path="/zynq_fsbl_bsp/system.mss"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" name="libxil.a" tooltip="system_bsp/ps7_cortexa9_0/lib/libxil.a">
+<persistable path="/system_bsp/ps7_cortexa9_0/lib/libxil.a"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
-<persistable path="/system_bsp/system.mss"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters_ps.h" tooltip="system_bsp/ps7_cortexa9_0/libsrc/standalone_v3_06_a/src/xparameters_ps.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/standalone_v3_06_a/src/xparameters_ps.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters_ps.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters_ps.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters_ps.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="ps7_init.html" tooltip="zynq_fsbl/src/ps7_init.html">
+<persistable path="/zynq_fsbl/src/ps7_init.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="ps7_init.tcl" tooltip="zynq_fsbl/src/ps7_init.tcl">
+<persistable path="/zynq_fsbl/src/ps7_init.tcl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fmc_imageon_vita_receiver.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c">
+<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/fmc_imageon_vita_receiver_v1_13_a/src/fmc_imageon_vita_receiver.c"/>
 </file>
 </mruList>
 </workbench>

@@ -1,6 +1,6 @@
 the_ROM_image:
 {
-	[bootloader]U:\Desktop\cpre488mp3\sw\zynq_fsbl\Debug\zynq_fsbl.elf
-	U:\Desktop\cpre488mp3\sw\system_hw_platform\system.bit
-	U:\Desktop\cpre488mp3\bootimage\u-boot.elf
+	[bootloader]U:\Documents\cpre488mp3\sw\zynq_fsbl\Debug\zynq_fsbl.elf
+	U:\Documents\cpre488mp3\sw\system_hw_platform\system.bit
+	U:\Documents\cpre488mp3\bootimage\u-boot.elf
 }
