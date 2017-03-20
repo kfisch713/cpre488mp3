@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>system_bsp</project>
+		<project>system_hw_platform</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

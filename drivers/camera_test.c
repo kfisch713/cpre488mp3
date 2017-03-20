@@ -9,7 +9,7 @@
 // from device tree
 #define BTN_ADDRESS 0x41200000
 #define SW_ADDRESS  0x41240000
-#define FRM_BUFF1	0x107E9000
+#define FRM_BUFF1	0x10000000
 
 //#define FRM_BUFF2   0x103F4800
 //#define FRM_BUFF3   0x107E9000
@@ -59,10 +59,15 @@ int main() {
     exit(1);
   }
   
-  int dev_mem_ptr = open("/dev/mem", O_RDONLY);
+  int dev_mem_ptr = open("/dev/mem", O_RDWR);
+  if (dev_mem_ptr == -1) {
+    perror("Couldn't open file: %m");
+    exit(1);
+  }
+  
   BTNs = mmap(NULL, 1, PROT_READ, MAP_SHARED, dev_mem_ptr, BTN_ADDRESS);
   SWs = mmap(NULL, 1, PROT_READ, MAP_SHARED, dev_mem_ptr, SW_ADDRESS);
-  IMAGE_BUFF1 = mmap(NULL, HEIGHT * WIDTH * sizeof(*IMAGE_BUFF1), PROT_READ, MAP_SHARED, dev_mem_ptr, FRM_BUFF1);
+  IMAGE_BUFF1 = mmap(NULL, HEIGHT * WIDTH * sizeof(*IMAGE_BUFF1), PROT_READ | PROT_WRITE, MAP_SHARED, dev_mem_ptr, FRM_BUFF1);
   //IMAGE_BUFF2 = mmap(NULL, HEIGHT * WIDTH * sizeof(*IMAGE_BUFF2), PROT_READ, MAP_SHARED, dev_mem_ptr, FRM_BUFF2);
   //IMAGE_BUFF3 = mmap(NULL, HEIGHT * WIDTH * sizeof(*IMAGE_BUFF3), PROT_READ, MAP_SHARED, dev_mem_ptr, FRM_BUFF3);
   
@@ -80,9 +85,14 @@ int main() {
 										  IMAGE_BUFF2[(WIDTH * HEIGHT/2)], 
 										  IMAGE_BUFF3[(WIDTH * HEIGHT/2)]);
 										  */
-	printf("Center Pixel = %x\n", IMAGE_BUFF1[(WIDTH * HEIGHT/2)]);									  
+	//printf("Center Pixel = %x\n", IMAGE_BUFF1[(WIDTH * HEIGHT/2)]);									  
     fflush(stdout);
 	usleep(duration);
+	
+	IMAGE_BUFF1[WIDTH * HEIGHT/2] = 0xFFFF;
+	IMAGE_BUFF1[WIDTH * HEIGHT/2] = 0x0000;
+	IMAGE_BUFF1[WIDTH * HEIGHT/2 + 1] = 0xFFFF;
+	IMAGE_BUFF1[WIDTH * HEIGHT/2 + 1] = 0x0000;
   }
 	
   

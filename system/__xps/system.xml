@@ -1,7 +1,7 @@
 
-<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Fri Mar 10 14:11:37 2017">
+<EDKSYSTEM EDKVERSION="14.7" EDWVERSION="1.2" TIMESTAMP="Mon Mar 20 12:39:16 2017">
 
-  <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="//my.files.iastate.edu/users/burneykb/Documents/cpre488mp3/system/system.xmp" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="xc7z020" PACKAGE="clg484" PART="xc7z020clg484-1" SOURCE="//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/system/system.xmp" SPEEDGRADE="-1"/>
 
   <MODULES>
     <MODULE HWVERSION="4.01.a" INSTANCE="processing_system7_0" IPTYPE="PROCESSOR" MHS_INDEX="0" MODCLASS="PROCESSOR" MODTYPE="processing_system7" PROCTYPE="ARM">
@@ -6051,7 +6051,7 @@
       <DESCRIPTION TYPE="SHORT">Video Timing Controller</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Configurable video timing generator and detector for blanks syncs and active video</DESCRIPTION>
       <DOCUMENTATION>
-        <DOCUMENT SOURCE="//my.files.iastate.edu/users/burneykb/Documents/cpre488mp3/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
+        <DOCUMENT SOURCE="//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_GEN_AUTO_SWITCH" TYPE="integer" VALUE="1"/>
@@ -7072,7 +7072,7 @@
       <DESCRIPTION TYPE="SHORT">Video Timing Controller</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">Configurable video timing generator and detector for blanks syncs and active video</DESCRIPTION>
       <DOCUMENTATION>
-        <DOCUMENT SOURCE="//my.files.iastate.edu/users/burneykb/Documents/cpre488mp3/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
+        <DOCUMENT SOURCE="//my.files.iastate.edu/users/kfisch13/Desktop/cpre488mp3/system/../repository/ProcessorIPLib/pcores/v_tc_v5_00_a/doc/pg016_v_tc.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
         <PARAMETER ASSIGNMENT="OPTIONAL" MPD_INDEX="0" NAME="C_GEN_AUTO_SWITCH" TYPE="integer" VALUE="1"/>
